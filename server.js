@@ -16,8 +16,8 @@ var twit = new twitter({
 
 stream = null;
 
-server.listen(8081);
-console.log('Server is listening on port 8081!')
+server.listen(process.env.PORT || 8081);
+console.log('Server is listening on port 8081, or the local Heroku port')
 
 //Setup routing for app
 app.use(express.static(__dirname + '/public'));
